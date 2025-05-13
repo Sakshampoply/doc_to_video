@@ -116,7 +116,7 @@ def create_slideshow(text_slides, output_video="output.mp4"):
     for i, slide in enumerate(text_slides):
         image_path = f"slide_{i}.png"
         create_text_slide(slide, image_path)
-        images.append(ImageClip(image_path).with_duration(5))  # ✅ Use with_duration()
+        images.append(ImageClip(image_path).with_duration(5))  # Use with_duration()
 
     try:
         video = concatenate_videoclips(images, method="compose")
